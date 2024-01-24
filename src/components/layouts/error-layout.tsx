@@ -1,13 +1,15 @@
 import styles from "../../styles/error-layout.module.css";
 
 type Props = {
-  children: string | JSX.Element | JSX.Element[];
+  error: string;
 };
 
-const ErrorLayout = ({ children }: Props) => {
+const ErrorLayout = ({ error }: Props) => {
   return (
     <>
-      <div className={styles["error-layout"]}>{children}</div>
+      <div className={styles["error-layout"]}>
+        <h1 className={styles["error-children"]}>{error}</h1>
+      </div>
     </>
   );
 };

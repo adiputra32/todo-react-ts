@@ -1,6 +1,6 @@
 import HomeLayout from "../components/layouts/main-layout";
 import Header from "../components/ui/header";
-import styles from "../styles/new-list-page.module.css";
+import styles from "../styles/list-page.module.css";
 import LeftArrow from "../assets/left-arrow";
 import TaskForm from "../components/ui/task-form";
 import { useNavigate, useParams } from "react-router-dom";
@@ -58,7 +58,7 @@ const EditList = () => {
                 transform: !isElementVisible ? "scale(100%)" : "scale(95%)",
               }}
             >
-              {editTaskForm.watch("title")}
+              {editTaskForm.watch("title") ?? "Title"}
             </span>
           </>
         </Header>

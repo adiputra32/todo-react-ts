@@ -36,7 +36,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* gap: 1.5rem; */
   height: 100vh;
   width: 100vw;
   padding: 4rem 1.5rem 1rem 1.5rem;
@@ -198,7 +197,6 @@
   overflow: hidden;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  /* background: #ff00005b; */
 }
 
 .choose-label {
