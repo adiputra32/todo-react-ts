@@ -1,0 +1,256 @@
+.button-back {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  height: fit-content;
+  min-height: 2rem;
+  z-index: 2;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.header span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.new-list-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.5rem; */
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem 1.5rem 1rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.input-title {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  outline-style: none;
+
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 31.2px;
+  letter-spacing: -0.72px;
+}
+
+.input-title-header {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 31.2px;
+  letter-spacing: -0.72px;
+
+  transition: all 75ms linear;
+}
+
+.input-title::placeholder {
+  color: black;
+}
+
+.input-title:focus::placeholder {
+  color: #757575;
+}
+
+.task-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.task-details-item-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+  padding-bottom: 2rem;
+}
+
+.task-details-item {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-details {
+  flex: 1 1 0%;
+  background-color: transparent;
+  border: none;
+  width: auto;
+  outline-style: none;
+
+  color: rgba(0, 0, 0, 0.85);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: -0.42px;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  padding-top: 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #000;
+  transition: all 25ms linear;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 20%;
+  top: 40%;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.task-label {
+  border-top: solid 1px #dadada;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  /* background: #ff00005b; */
+}
+
+.choose-label {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.label-options {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+  gap: 0.75rem;
+}
+
+.label-options::-webkit-scrollbar {
+  width: 0;
+}
+
+.label-options input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.label-options label {
+  display: flex;
+  padding: 6px 16px;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 1rem;
+  background: #919191;
+  color: #ffffff;
+  transition: all 50ms linear;
+}
+
+.label-options input:checked + label {
+  display: flex;
+  padding: 6px 16px;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 1rem;
+  background: #000;
+  color: #ffffff;
+}
