@@ -1,4 +1,4 @@
-import { createBrowserRouter, redirect } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/errors";
 import NotFound from "../pages/errors/404";
 import WelcomePage from "../pages/welcome-page";
@@ -12,10 +12,6 @@ export const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => redirect("/welcome"),
-      },
-      {
-        path: "/welcome",
         element: <WelcomePage />,
       },
       {

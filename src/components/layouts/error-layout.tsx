@@ -1,3 +1,5 @@
+import styles from "../../styles/error-layout.module.css";
+
 type Props = {
   children: string | JSX.Element | JSX.Element[];
 };
@@ -5,7 +7,7 @@ type Props = {
 const ErrorLayout = ({ children }: Props) => {
   return (
     <>
-      <div className="error-layout">{children}</div>
+      <div className={styles["error-layout"]}>{children}</div>
     </>
   );
 };

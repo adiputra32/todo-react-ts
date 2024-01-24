@@ -1,6 +1,6 @@
 import ErrorLayout from "../../components/layouts/error-layout";
 
-const NotFound = () => {
+const ErrorPage = () => {
   return (
     <>
       <ErrorLayout>
@@ -10,4 +10,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default ErrorPage;

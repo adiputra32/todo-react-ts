@@ -15,7 +15,6 @@ const EditList = () => {
   const navigate = useNavigate();
   const { tasks, updateTask } = useTaskStore();
   const [isElementVisible, setIsElementVisible] = useState<boolean>(false);
-
   const taskId = id ? parseInt(id, 10) : undefined;
   const createtaskDefaultValue: Task | undefined =
     taskId != undefined ? tasks[taskId] : undefined;

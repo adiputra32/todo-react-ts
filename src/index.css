@@ -20,18 +20,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-.error-layout {
-  width: 100%;
-  background-color: #fff;
-  opacity: 0.1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.error-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-}

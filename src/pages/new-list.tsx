@@ -18,9 +18,6 @@ const NewList = () => {
   const [removeConfirmation, setRemoveConfirmation] = useState<boolean>(false);
   const createTaskForm = useForm<Task>({
     defaultValues: {
-      title: undefined,
-      label: undefined,
-      color: undefined,
       details: [],
     },
   });
