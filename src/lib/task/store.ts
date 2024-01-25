@@ -12,7 +12,7 @@ const storedTasksString = localStorage.getItem("tasks");
 const storedTasks = storedTasksString ? JSON.parse(storedTasksString) : null;
 
 const useTaskStore = create<TaskStore>((set) => ({
-  tasks: storedTasks.tasks || [],
+  tasks: storedTasks?.tasks || [],
   addTask: (newTask: Task) =>
     set((state) => ({
       tasks: [...state.tasks, newTask],
