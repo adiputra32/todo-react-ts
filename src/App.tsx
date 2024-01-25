@@ -1,8 +1,12 @@
-import { RouterProvider } from "react-router-dom";
+import { HashRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routes";
 
 function App() {
-  return <RouterProvider router={routes} />;
+  return (
+    <HashRouter>
+      <RouterProvider router={routes} />;
+    </HashRouter>
+  );
 }
 
 export default App;
